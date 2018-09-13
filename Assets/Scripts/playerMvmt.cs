@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class playerMvmt : MonoBehaviour {
 
+    private Rigidbody rb;
+    public float speed;
 
+    void Start () {
+        rb = GetComponent<Rigidbody>();
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        var z = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+    // Update is called once per frame
+    void Update () {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        Vector3 movement = new Vector3(0.0f, 0.0f, moveHorizontal);
 
-        transform.Translate(0, 0, z);
+        rb.AddForce(movement * 50);
     }
 }
