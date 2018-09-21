@@ -6,7 +6,8 @@ public class playerMvmt : MonoBehaviour {
 
     private Rigidbody rb;
     private Vector3 jump;
-    private Vector3 moveForce;
+    private Vector3 horizontalMoveForce;
+    private Vector3 otherMoveForce;
     public float speed;
 
     bool bLeftReq, bRightReq;
@@ -18,7 +19,8 @@ public class playerMvmt : MonoBehaviour {
     void Start () {
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
-        moveForce = new Vector3(0.0f, 0.0f, 2.0f);
+        horizontalMoveForce = new Vector3(0.0f, 0.0f, 2.0f);
+        otherMoveForce = new Vector3(2.0f, 0.0f, 0.0f);
     }
 
     // Update is called once per frame
@@ -27,13 +29,20 @@ public class playerMvmt : MonoBehaviour {
         // WALK
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.AddForce(-speed * moveForce, ForceMode.Force);
-            bLeftReq = true;
+            rb.AddForce(-speed * horizontalMoveForce, ForceMode.Force);
         }
-            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            rb.AddForce(speed * moveForce, ForceMode.Force);
-            bRightReq = true;
+            rb.AddForce(speed * horizontalMoveForce, ForceMode.Force);
+        }
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            rb.AddForce(-speed * otherMoveForce, ForceMode.Force);
+        }
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            rb.AddForce(speed * otherMoveForce, ForceMode.Force);
         }
 
 
