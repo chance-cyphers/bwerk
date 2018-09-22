@@ -6,6 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/World_Selector.unity
+    guid: a5c1e17dee1b1784c8a9d3776ea5fdd9
+  - enabled: 1
+    path: Assets/Scenes/Warrior_1.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Warrior_2.unity
+    guid: af0bf798e3b1d3d4c827e8a5ccd76bd4
+  - enabled: 1
+    path: Assets/Scenes/Warrior_3.unity
+    guid: 1fafb3152ca2e5d4d912074df49bc449
+  - enabled: 1
+    path: Assets/Scenes/Mage_1.unity
+    guid: 9d332731bc91b6e4382d8b1af6a6f793
+  - enabled: 1
+    path: Assets/Scenes/Mage_2.unity
+    guid: bd4885de08a39b440aea0e3862147867
+  - enabled: 1
+    path: Assets/Scenes/Mage_3.unity
+    guid: b992d4bd767e32e45a1e2dd0d745540f
+  - enabled: 1
+    path: Assets/Scenes/Rogue_1.unity
+    guid: 861d62b79a3d60e479590a4cc8b0cd66
+  - enabled: 1
+    path: Assets/Scenes/Rogue_2.unity
+    guid: 71bc431f50643e241ad9df6da6530dc5
+  - enabled: 1
+    path: Assets/Scenes/Rogue_3.unity
+    guid: a5b687c26d1481745a181f6e484efc06
   m_configObjects: {}
