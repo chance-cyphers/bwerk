@@ -155,12 +155,12 @@ nm
 
 Story
 
-Scene one
+### Scene one
 
 
-Character
+## Character
 	-Goal
-Enemies
+## Enemies
 	-Actions
-Objects
+## Objects
 	-Inventory
