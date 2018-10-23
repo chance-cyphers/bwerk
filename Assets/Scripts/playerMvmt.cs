@@ -1,29 +1,44 @@
 ﻿using UnityEngine;
 
-public class playerMvmt : MonoBehaviour {
-
+public class playerMvmt : MonoBehaviour
+{
     CharacterController characterController;
     public float speed = 18.0f;
     public float jumpSpeed = 8.0f;
-    public float gravity = 20.0f;
+    Rigidbody rb;
+    bool isGrounded = true;
 
     Vector3 moveDirection = Vector3.zero;
 
-    void Start () {
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
     }
 
-    void Update () {
-        moveDirection = new Vector3(Input.GetAxis("Vertical"), 0.0f, Input.GetAxis("Horizontal"));
-        moveDirection *= speed;
+    void Update()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = -Input.GetAxis("Vertical");
 
-        if (Input.GetButton("Jump"))
+        Vector3 movement = new Vector3(moveVertical, 0.0f, moveHorizontal);
+        rb.AddForce(movement * speed);
+
+        if (isGrounded && Input.GetButton("Jump"))
         {
-            moveDirection.y = jumpSpeed;
+            rb.AddForce(new Vector3(0.0f, jumpSpeed, 0.0f), ForceMode.Impulse);
+            isGrounded = false;
         }
+    }
 
-        moveDirection.y -= gravity * Time.deltaTime;
-        characterController.Move(moveDirection * Time.deltaTime);
+    void OnCollisionEnter(Collision other)
+    {
+        isGrounded = other.gameObject.tag == "Ground";
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        isGrounded = other.gameObject.tag == "Ground";
     }
 
 }
