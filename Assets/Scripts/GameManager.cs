@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
     // SCENE MANAGEMENT - maybe theres a better, more concise way but I don't care
     public void GoToW1()
     {
-        SceneManager.LoadScene("Warrtior_1");
+        SceneManager.LoadScene("Warrior_1");
     }
 
     public void GoToW2()
