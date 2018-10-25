@@ -4,7 +4,7 @@ Heather Byrom
 Our Game?
 
 ## Description
-Play as a warrior girl in a post apocalyptic world training to be dope as fuck to beat organization that is trying to take over the remaining “humans”.
+The human race has been dumping toxic waste into volcanoes for so long, finally a few erupt and render the Earth nearly unliveable. 2 very powerful and wealthy families hide out in a bunker until the world is somewhat habitable. During that time they build a giant biodome city above them. The people closets to the volcano die, obviously, but those just outside the blast radius survive, only to be disgustingly disfigured and mutated. Those farther from that look relatively normal, though they do glow a bit. Those people slowly discover they have magic. 
 
 ## Goals
 Get to last level to defeat evil organization
@@ -150,17 +150,7 @@ HP damage to pl:  varies
 - Falling branches/trees
 - Fire
 
-
-nm
-
-Story
-
-### Scene one
+## Story
 
 
-## Character
-	-Goal
-## Enemies
-	-Actions
-## Objects
-	-Inventory
+
